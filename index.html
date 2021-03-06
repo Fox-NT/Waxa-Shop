@@ -6,10 +6,410 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7953fe4c8d.js" crossorigin="anonymous"></script>
     <title>Waxa Shop</title>
 </head>
 <body>
-    <header class="header_container"></header>
-
+    <header class="header_container">
+        <div class="container">
+            <div class="header_contacts">
+                <ul class="header_contacts_list">
+                    <li class="header_contacts_item"><a href="#">Санкт-Петербург</a></li>
+                    <li class="header_contacts_item"><a href="#">8 (812) 577-42-18 / Заказать звонок</a></li>
+                    <li class="header_contacts_item"><a href="#">Вход / Регистрация</a></li>
+                    <li class="header_contacts_item"><a href="#">Избранное</a></li>
+                </ul>
+            </div>
+            <div class="header_wrapper_menu">
+                <div class="burger_menu_mobile">
+                    <div class="burger_mobile">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="burger_menu">
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                    <span>Меню</span>
+                </div>
+                <div class="header_logo">
+                    <img src="img/logo.svg" alt="Logotype">
+                </div>
+                <div class="header_cart">
+                    <span>Корзина</span>
+                    <div class="cart">
+                        <svg width="19" height="26" viewBox="0 0 19 26" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.981 22.1913L17.6673 5.85472C17.6293 5.3406 17.2295 4.9314 16.7535 4.9314H14.3166C14.1358 2.1824 12.0225 0 9.5 0C6.97745 0 4.85471 2.1824 4.67385 4.9314H2.23697C1.76102 4.9314 1.36122 5.3301 1.32315 5.85472L0 22.2123V22.2333C0 22.2542 0 22.2752 0 22.3067C0 24.3422 1.67535 26 3.74098 26H15.259C17.3246 26 19 24.3422 19 22.3067C18.9905 22.2752 18.9905 22.2332 18.981 22.1913ZM9.49048 2.02502C11.004 2.02502 12.2796 3.30508 12.4604 4.9314H6.52054C6.7014 3.29459 7.97695 2.02502 9.49048 2.02502ZM15.2495 23.9645H3.73146C2.70341 23.9645 1.85621 23.2405 1.83717 22.3487L3.07465 6.96691H4.65481V8.78208C4.65481 9.33817 5.06413 9.79984 5.57816 9.79984C6.08266 9.79984 6.5015 9.34867 6.5015 8.78208V6.96691H12.489V8.78208C12.489 9.33817 12.8983 9.79984 13.4123 9.79984C13.9264 9.79984 14.3357 9.34867 14.3357 8.78208V6.96691H15.9158L17.1533 22.3487C17.1247 23.2405 16.2776 23.9645 15.2495 23.9645Z" fill="#262626"/>
+                            </svg>
+                        <div class="cart_counter">
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <span>1 200 &#8381;</span>
+                </div>
+                <div class="contacts_mobile">
+                    <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0C3.59233 0 0 3.59649 0 8.00926C0 10.8541 0.855701 11.9856 4.95661 17.4005C5.667 18.338 6.4662 19.3968 7.38648 20.6172C7.53179 20.8111 7.75782 20.9243 8 20.9243C8.24218 20.9243 8.46821 20.8111 8.61352 20.6172C9.54188 19.3725 10.3653 18.2896 11.0272 17.4086C15.1443 11.9775 16 10.846 16 8.00118C16 3.59649 12.4157 0 8 0ZM8 1.53558C11.5681 1.53558 14.4743 4.4451 14.4743 8.01734C14.4743 10.345 13.7639 11.2825 9.81635 16.5034C9.27548 17.2147 8.6781 18.0148 8.00807 18.8957C7.33804 18.0067 6.73259 17.2066 6.1998 16.4954L6.19173 16.4792C2.25227 11.2825 1.54188 10.345 1.54188 8.00926C1.5338 4.43702 4.43189 1.53558 8 1.53558Z" fill="#262626"/>
+                        <path d="M8.00003 12.3978C10.4138 12.3978 12.3835 10.4258 12.3835 8.00925C12.3835 5.59273 10.4138 3.62073 8.00003 3.62073C5.58631 3.62073 3.61658 5.59273 3.61658 8.00925C3.61658 10.4258 5.58631 12.3978 8.00003 12.3978ZM8.00003 5.15631C9.5742 5.15631 10.8497 6.44134 10.8497 8.00925C10.8497 9.57715 9.56613 10.8622 8.00003 10.8622C6.42586 10.8622 5.15038 9.57715 5.15038 8.00925C5.15038 6.44134 6.42586 5.15631 8.00003 5.15631Z" fill="#262626"/>
+                        </svg>
+                </div>
+            </div>
+            <div class="header_category">
+                <div class="category_mobile_wrapper">
+                    <div class="category_mobile"><a href="#">Категории</a> </div>
+                    <div class="search_mobile"><a href="#">Поиск</a> </div>
+                </div>
+                <ul class="category_list">
+                    <li class="category_item"><a href="#">Средства для обуви</a></li>
+                    <li class="category_item"><a href="#">Материал</a></li>
+                    <li class="category_item"><a href="#">Назначение</a></li>
+                    <li class="category_item"><a href="#">Наборы</a></li>
+                    <li class="category_item"><a href="#">Аксессуары</a></li>
+                    <li class="category_item"><a href="#">Бритье и уход</a></li>
+                    <li class="category_item"><a href="#">Бренды</a></li>
+                    <li class="category_item"><a href="#">Поиск</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="main_container">
+        <div class="container">
+            <div class="slider_sales">
+                <div class="slide_item">
+                    <div class="slider_left_column">
+                        <span class="sale">Скидки до 25%</span>
+                        <span class="slider_item_title">Французские спреи</span>
+                        <span class="slider_item_subtitle">Saphir Medalle D`or</span>
+                        <span class="slider_item_descr">Премиальные лаки и спреи для ухода за изделиями из натуральной кожи по самым выгодным ценам</span>
+                        <div class="slider_item_select">
+                            <a href="#" class="slider_item_select"><i class="fas fa-long-arrow-alt-right"></i>Выбирайте</a>
+                        </div>
+                    </div>
+                    <div class="slider_right_column">
+                        <img src="img/item1.png" alt="Французские спреи Saphir Medalle D`or">
+                    </div>
+                </div>
+                <div class="slider_btn btn-left">
+                    <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="slider_btn btn-right">
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+                <div class="slider_dots_nav">
+                    <span class="dots">
+                        <span class="dots_active dots_activ_anim"></span>
+                    </span>
+                    <span class="dots">
+                        <span class="dots_active dots_activ_anim"></span>
+                    </span>
+                    <span class="dots">
+                        <span class="dots_active dots_activ_anim"></span>
+                    </span>
+                    <span class="dots">
+                        <span class="dots_active dots_activ_anim"></span>
+                    </span>
+                    <span class="dots">
+                        <span class="dots_active dots_activ_anim"></span>
+                    </span>
+                </div>
+            </div>
+            <section class="shoes_cosmetic">
+                <div class="logo_shoes_cosmetic">
+                    <img src="img/logo_block.svg" alt="Обувная косметика Сапфир">
+                </div>
+                <div class="title_shoes_cosmetic">
+                    Обувная косметика <span>Сапфир</span>
+                </div>
+                <div class="descr_shoes_cosmetic">
+                    Добро пожаловать в Waxa Shop — онлайн магазин средств по уходу за обувью. Мы рады предложить Вам лучшие в мире средства для обуви от легендарной французской фирмы сапфир. Косметика для обуви Saphir имеет столетнюю историю и безукоризненную репутацию, являясь эталоном качества среди любителей и профессионалов обувного ухода. В ассортименте обувной косметики нужно уметь ориентироваться. Чем отличаются хорошие средства, что входит в их состав и как правильно подобрать удачный набор?
+                </div>
+                <div class="descr_shoes_cosmetic_mobile">
+                    Добро пожаловать в Waxa Shop — онлайн магазин средств по уходу за обувью. Мы рады предложить Вам лучшие в мире средства для обуви от легендарной французской фирмы сапфир.
+                </div>
+                <div class="read_more_mobile"><a href="#">Читать дальше</a></div>
+                <div class="dots_shoes">
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle"></i>
+                </div>
+            </section>
+            <section class="collection">
+                <div class="logo_collection">
+                    <img src="img/logo_collection.svg" alt="Коллекция">
+                </div>
+                <div class="title_collection">
+                    Коллекции
+                </div>
+                <div class="dots_collection">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="collection_mobile">
+                    <div class="item_mobile">
+                        <img src="img/item_coll_mob_1.jpg" alt="Крема для обуви">
+                        <div class="item_title">Крема для обуви</div>
+                        <div class="item_link"><i class="fas fa-arrow-right"></i></div>
+                        <div class="item_price">от 395.-</div>
+                        <div class="item_stock">25+ товаров</div>
+                    </div>
+                    <div class="item_mobile">
+                        <img src="img/item_coll_mob_2.jpg" alt="Очиститель для обуви">
+                        <div class="item_title">Очиститель для обуви</div>
+                        <div class="item_link"><i class="fas fa-arrow-right"></i></div>
+                        <div class="item_price">от 525.-</div>
+                        <div class="item_stock">15+ товаров</div>
+                    </div>
+                    <div class="item_mobile">
+                        <img src="img/item_coll_mob_3.jpg" alt="Щетки для обуви">
+                        <div class="item_title">Щетки для обуви</div>
+                        <div class="item_link"><i class="fas fa-arrow-right"></i></div>
+                        <div class="item_price">от 1 190.-</div>
+                        <div class="item_stock">30+ товаров</div>
+                    </div>
+                </div>
+                <div class="collection_row">
+                    <div class="column_one-item">
+                        <div class="one-row_item">
+                            <img src="img/item_coll_1.jpg" alt="Крема для обуви">
+                            <div class="item_title">Крема для обуви</div>
+                            <div class="item_link"><i class="fas fa-arrow-right"></i></div>
+                            <div class="item_price">от 395.-</div>
+                            <div class="item_stock">25+ товаров</div>
+                        </div>
+                    </div>
+                    <div class="column_two-item">
+                        <div class="one-row_item">
+                            <img src="img/item_coll_2.jpg" alt="Очиститель для обуви">
+                            <div class="item_title">Очиститель для обуви</div>
+                            <div class="item_link"><i class="fas fa-arrow-right"></i></div>
+                            <div class="item_price">от 525.-</div>
+                            <div class="item_stock">15+ товаров</div>
+                        </div>
+                        <div class="one-row_item">
+                            <img src="img/item_coll_3.jpg" alt="Щетки для обуви">
+                            <div class="item_title">Щетки для обуви</div>
+                            <div class="item_link"><i class="fas fa-arrow-right"></i></div>
+                            <div class="item_price">от 1190.-</div>
+                            <div class="item_stock">30+ товаров</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collection_row second_row">
+                    <div class="column_two-item">
+                        <div class="one-row_item">
+                            <img src="img/item_coll_4.jpg" alt="Очиститель для обуви">
+                            <div class="item_title">Средства для реставрации кожи</div>
+                            <div class="item_link"><i class="fas fa-arrow-right"></i></div>
+                            <div class="item_price">от 525.-</div>
+                            <div class="item_stock">105+ товаров</div>
+                        </div>
+                        <div class="one-row_item">
+                            <img src="img/item_coll_5.jpg" alt="Воск для обуви">
+                            <div class="item_title">Воск для обуви</div>
+                            <div class="item_link"><i class="fas fa-arrow-right"></i></div>
+                            <div class="item_price">от 430.-</div>
+                            <div class="item_stock">15+ товаров</div>
+                        </div>
+                    </div>
+                    <div class="column_one-item">
+                        <div class="one-row_item">
+                            <img src="img/item_coll_6.jpg" alt="Краска для обуви">
+                            <div class="item_title">Краска для обуви</div>
+                            <div class="item_link"><i class="fas fa-arrow-right"></i></div>
+                            <div class="item_price">от 280.-</div>
+                            <div class="item_stock">100+ товаров</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="subscribe">
+                <div class="subscribe_column_one">
+                    <!-- <div>
+                        <img src="img/post_block.png" alt="Subscribe">
+                    </div> -->
+                        <img src="img/post_block.png" alt="Subscribe">
+                </div>
+                <div class="subcribe_column-two">
+                    <div class="title_subscribe">
+                        Подпишитесь на нас
+                    </div>
+                    <div class="subtitle_subscribe">
+                        <span>Получите</span> безграничный доступ к самым выгодным предложениям
+                    </div>
+                    <div class="descr_subscribe">
+                        Узнавайте первым о полезных статьях, акциях и эклюзивных предложениях!
+                    </div>
+                    <div class="input_subscribe">
+                        <form action="mailto:newtorka@gmail.com" enctype="text/plain">
+                        <input type="email" name="email" id="email" placeholder="Введите Ваш E-mail">
+                        <button type="submit">
+                            <i class="fas fa-long-arrow-alt-right"></i>Подписаться
+                        </button>
+                    </form>
+                    </div>
+                </div>
+            </section>
+            <section class="brand-care">
+                <div class="logo_brand-care">
+                    <img src="img/logo_block2.svg" alt="Сапфир для обуви – брендовая забота">
+                </div>
+                <div class="title_brand-care">
+                    Сапфир для обуви – брендовая забота
+                </div>
+                <div class="descr_brand-care">
+                    Уход за обувью – рациональное вложение средств и сил. Поэтому косметика для обуви должна быть качественной. Сапфир – продукция, которой удалось заслужить безупречную репутацию среди пользователей и профессионалов по восстановлению обуви. Аксессуары для ухода от этого бренда служат долго, а химические составы исключительно положительно влияют на внешний вид изделий.
+                    <span>Средства от знаменитого французского бренда очень разнообразны. Линейки обувной косметики Сапфир включают разнообразные средства для очистки (пенки, шампуни, эмульсии), крема с широкой палитрой оттенков, аэрозоли и краски. Существуют специальные серии, разработанные для гладкой кожи, наборы для замши, комплекты для нубука и полный ассортимент всех возможных инструментов.</span>
+                </div>
+                <div class="descr_brand-care_mobile">
+                    Уход за обувью – рациональное вложение средств и сил. Поэтому косметика для обуви должна быть качественной. Сапфир – продукция, которой удалось заслужить безупречную репутацию среди пользователей и профессионалов по восстановлению обуви.
+                </div>
+                <div class="read_more_mobile">Читать дальше</div>
+                <div class="dots_brand-care">
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle"></i>
+                </div>
+            </section>
+            <section class="journal">
+                <div class="logo_journal">
+                    <img src="img/logo_block3.png" alt="Журнал">
+                </div>
+                <div class="title_journal">
+                    Журнал
+                </div>
+                <div class="dots_journal">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="journal_list">
+                    <div class="journal_item">
+                        <div class="journal_img"><img src="img/news1.png" alt="Уход за бородой и усами в домашних условиях"></div>
+                        <div class="journal_item_body">
+                            <div class="journal_theme">Стиль</div>
+                            <div class="journal_date"><time datetime="2019-05-04">4 мая 2019</datetime></div>
+                            <div class="journal_title">Уход за бородой и усами в домашних условиях</div>
+                            <div class="journal_descr">Мода поражает разными формами усов, щетиной, густой растительностью на лице, которые подчеркивают мужественность, аристократичность мужчин. Однако отрастить этот аксессуар – только</div>
+                            <div class="journal_read-more"><a href="#">Читать дальше</a></div>
+                        </div>
+                    </div>
+                    <div class="journal_item">
+                        <div class="journal_img"><img src="img/news2.png" alt="Как покрасить кожаную обувь? Использование проникающей краски Saphir Teinture"></div>
+                        <div class="journal_item_body">
+                            <div class="journal_theme">Инструкции</div>
+                            <div class="journal_date"><time datetime="2019-04-21">21 апреля 2019</datetime></div>
+                            <div class="journal_title">Как покрасить кожаную обувь? Использование проникающей краски Saphir Teinture</div>
+                            <div class="journal_descr">В основу этой инструкции лег опыт перекраски обуви в домашних условиях от любителя ухода за обувью. Автор достиг приемлемого результата,</div>
+                            <div class="journal_read-more"><a href="#">Читать дальше</a></div>
+                        </div>
+                    </div>
+                    <div class="journal_item">
+                        <div class="journal_img"><img src="img/news3.png" alt="Обзор средств для кроссовок Tarrago Sneakers"></div>
+                        <div class="journal_item_body">
+                            <div class="journal_theme">Обзоры</div>
+                            <div class="journal_date"><time datetime="2019-04-15">15 апреля 2019</datetime></div>
+                            <div class="journal_title">Обзор средств для кроссовок Tarrago Sneakers</div>
+                            <div class="journal_descr">Сегодняшний пост посвящен серии продуктов для ухода за кроссовками Tarrago Sneakers Care. На данный момент это наиболее полная линейка специализированной продукции для любителей</div>
+                            <div class="journal_read-more"><a href="#">Читать дальше</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="all_journal_items">
+                    <a href="#">Все записи</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer_container">
+        <div class="container">
+            <div class="social_link">
+               <div class="insta"><img src="img/inst.svg" alt="Instagram"></div>
+               <div class="vk"><img src="img/vk.svg" alt="Вконтакте"></div>
+               <div class="fb"><img src="img/fb.svg" alt="Facebook"></div>
+            </div>
+            <div class="social_link_mobile">
+                <div class="insta"><img src="img/inst_mobile.svg" alt="Instagram"></div>
+                <div class="vk"><img src="img/vk_mobile.svg" alt="Вконтакте"></div>
+                <div class="fb"><img src="img/fb_mobile.svg" alt="Facebook"></div>
+             </div>
+            <div class="footer_wrapper">
+                <div class="footer_nav_wrapper">
+                    <div class="footer_nav">
+                        <div class="footer_column big">
+                            <div class="footer_item_title">Компания</div>
+                            <ul class="footer_list_one">
+                                <div class="footer_column1">
+                                    <li class="footer_item"><a href="#">О нас</a></li>
+                                    <li class="footer_item"><a href="#">Акции и скидки</a></li>
+                                    <li class="footer_item"><a href="#">Часто задаваемые вопросы</a></li>
+                                    <li class="footer_item"><a href="#">Как сделать заказ</a>?</li>
+                                    <li class="footer_item"><a href="#">Вакансии</a></li>
+                                    <li class="footer_item"><a href="#">Контакты</a></li>
+                                </div>
+                                <div class="footer_column2">
+                                    <li class="footer_item"><a href="#">Отзывы</a></li>
+                                    <li class="footer_item"><a href="#">Программа лояльности</a></li>
+                                    <li class="footer_item"><a href="#">Оплата и доставка</a></li>
+                                    <li class="footer_item"><a href="#">Возврат товара</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="footer_column_wrapper">
+                            <div class="footer_column">
+                                <ul class="footer_list">
+                                    <li class="footer_item_title">Уход за обувью</li>
+                                    <li class="footer_item"><a href="#">Гладкая кожа</a></li>
+                                    <li class="footer_item"><a href="#">Замша, нубук, велюр</a></li>
+                                    <li class="footer_item"><a href="#">Лакированная кожа</a></li>
+                                    <li class="footer_item"><a href="#">Кожа рептилий</a></li>
+                                    <li class="footer_item"><a href="#">Кордован</a></li>
+                                    <li class="footer_item"><a href="#">Уход за кроссовками</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_column">
+                                <ul class="footer_list">
+                                    <li class="footer_item_title">Контакты</li>
+                                    <li class="footer_item"><a href="#">8 804 333 99 65</a><span>Бесплатный звонок по всей России</span></li>
+                                    <li class="footer_item"><a href="#">8 (812) 577 42 18</a><span>Магазин: Санкт-Петербург, <span>ул. 4-я Советская, 45</span></span></li>
+                                    <li class="footer_item"><a href="#">Наши офисы</a></li>
+                                    <li class="footer_item"><a href="#">Напишите нам</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-site">
+                        <div class="column-one">
+                            <a href="#">Политика конфиленциальности</a>
+                            <a href="#">Сообщить об ошибке</a>
+                            <a href="#">Карта сайта</a>
+                        </div>
+                        <div class="column-two">
+                            <img src="img/payment.png" alt="Payment">
+                        </div>
+                    </div>
+                    <div class="map-site_mobile">
+                        <div class="column-one">
+                            <a href="#">Политика конфиленциальности</a>
+                            <a href="#">Сообщить об ошибке</a>
+                            <a href="#">Карта сайта</a>
+                        </div>
+                        <div class="column-two">
+                            <img src="img/payment_mobile.png" alt="Payment">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="copyright">
+                <div class="footer_logo">
+                    <img src="img/logo_footer.svg" alt="Waxa Shop">
+                </div>
+                <div class="foooter_copyright-text">
+                    2015-2019 © Waxa Shop – интернет-магазин обувной косметики и аксессуаров для джентльменов. Все о правильном уходе за обувью. Копируя материалы, пожалуйста, ставьте активную ссылку на источник.
+                </div>
+                <div class='footer_made-in'>
+                    Сделано FoxNT
+                </div>
+            </footer>
+        </div>
+    </footer>
 </body>
 </html>
