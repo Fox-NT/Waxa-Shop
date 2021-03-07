@@ -549,6 +549,7 @@ body {
         background: #9fecff;
         border-radius: 12px 12px 0 12px;
         color: #333;
+        word-break: break-all;
     }
 
     .message_right .date_message {

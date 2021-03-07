@@ -34,9 +34,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const sendBtn = document.querySelector('.chat_send > button'),
           inputMsg = document.querySelector('.chat_send > input');
 
+
+          let a = new Date();
+
+        
+
+          function addZero(num) {
+            if (num >= 0 && num < 10) {
+                return `0${num}`;
+            } else {
+                return num;
+            }
+        }
+
+        const b = {
+            msg: [
+                {
+                name: ''
+                }
+            ]
+        };
         class ChatMsg {
+            avatar = 'img/zagl.png'
             constructor(avatar, text, hourse, minutes, parenT) {
-                this.avatar = avatar;
+                this.avatar = avatar || 'img/zagl.png';
                 this.text = text;
                 this.hourse = hourse;
                 this.minutes = minutes;
@@ -48,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 newMsg.innerHTML = `
                     <div class="message">
                         <div class="avatar">
-                            <img src=${this.avatar} alt="Avatar">
+                            <img src=${this.avatar} onError="this.src='img/zagl.png'" alt="Avatar">
                         </div>
                         <div class="message_text">
                             ${this.text}
@@ -68,13 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let a = chatList.scrollHeight;
                 chatList.scrollTop = a;
             }
-        }
-
-              let t = new Date();
-              const hours = t.getHours();
-              const minutes = t.getMinutes();
-          
-        
+        }        
 
         function sendRobot() {
             const leftMsg = document.querySelectorAll('.message_left');
@@ -83,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 msg.classList.add('message_left_act');
                 let a = chatList.scrollHeight;
                 chatList.scrollTop = a;
-                console.log(leftMsg.length);
+                // console.log(leftMsg.length);
             });
         }
             const list = document.querySelector('.chat_message_list');
@@ -91,92 +106,110 @@ document.addEventListener('DOMContentLoaded', () => {
                 robotMsg.classList.add('message_left');
                 robotMsg.classList.add('message_left_act');
             if(leftMsg.length === 0) {
+                a = new Date();
                 robotMsg.innerHTML = `
                     <div class="message">
                         <div class="avatar">
                             <img src='img/robot_avatar.png' alt="Avatar">
                         </div>
                         <div class="message_text">
-                            Привет, я еще глуп. Я пока тебя не понимаю. Попробуй позже!
+                            Привет, мы еще не знакомы! Отправь мне ссылку на свою аватарку. Я посмотрю на тебя.
                         </div>
                     </div>
                     <div class="date_message">
-                        <time>${hours}:${minutes}</time>
+                        <time>${a.getHours()}:${a.getMinutes()}</time>
                     </div>`;
                 list.append(robotMsg);
                 addClassRobot();
+                a = null;
               } else if (leftMsg.length === 1) {
+                a = new Date();
                     robotMsg.innerHTML = `
                     <div class="message">
                         <div class="avatar">
                             <img src='img/robot_avatar.png' alt="Avatar">
                         </div>
-                        <div class="message_text">
-                            Я же говорю, я еще глуп! Я не могу тебе ответить.
+                        <div class="message_text">Круто! А теперь давай познакомимся, Меня зовут Петя. А тебя?
                         </div>
                     </div>
                     <div class="date_message">
-                        <time>${hours}:${minutes}</time>
+                        <time>${a.getHours()}:${a.getMinutes()}</time>
                     </div>`;
                     list.append(robotMsg);
                     addClassRobot();
+                    a = null;
               } else if (leftMsg.length === 2) {
+                a = new Date();
                 robotMsg.innerHTML = `
                     <div class="message">
                         <div class="avatar">
                             <img src='img/robot_avatar.png' alt="Avatar">
                         </div>
                         <div class="message_text">
-                            Мне кажется, что глупый тут не я, а - ты!
+                        ${b.msg[1].name}, замечательно! Я еще плохо понимаю людей, заходи ко мне позже!
                         </div>
                     </div>
                     <div class="date_message">
-                        <time>${hours}:${minutes}</time>
+                        <time>${a.getHours()}:${a.getMinutes()}</time>
                     </div>`;
                     list.append(robotMsg);
                     addClassRobot();
+                    a = null;
             } else {
+                a = new Date();
                 robotMsg.innerHTML = `
                 <div class="message">
                     <div class="avatar">
                         <img src='img/robot_avatar.png' alt="Avatar">
                     </div>
                     <div class="message_text">
-                        Отстань!
+                        Еще рано, ${b.msg[1].name}!
                     </div>
                 </div>
                 <div class="date_message">
-                    <time>${hours}:${minutes}</time>
+                    <time>${a.getHours()}:${a.getMinutes()}</time>
                 </div>`;
                 list.append(robotMsg);
                 addClassRobot();
+                a = null;
           }
         }
-
+let i = 0;
           sendBtn.addEventListener('click', (e) => {
               e.preventDefault();
+                a = new Date();
               new ChatMsg(
-              "img/avatar.png",
+              b.msg[0].name,
               inputMsg.value,
-              hours,
-              minutes,
+              a.getHours(),
+              addZero(a.getMinutes()),
               '.chat_message_list')
               .render();
+                a = null;
               setTimeout(sendRobot, 1000);
+
+              let User = inputMsg.value;
+
+              b.msg[i] = {
+                  name: User
+              };
+              i++;
+              console.log(b.msg[0].name);
+              console.log(b);
+            //   console.log()
           });
 
           document.addEventListener('click', (e) => {
             if (e.code === 'Enter' && chat.classList.contains('chat_active')) { 
                 e.preventDefault();
                 new ChatMsg(
-                "img/avatar.png",
+                b.msg[1].img,
                 inputMsg.value,
-                hours,
-                minutes,
+                a.getHours(),
+                addZero(a.getMinutes()),
                 '.chat_message_list')
                 .render();
                 setTimeout(sendRobot, 1000);
             }
           });
-
 });
