@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
             chatList.scrollTop = a;
             chatBtn.innerHTML = '';
             chatBtn.innerHTML = '<i class="fas fa-times"></i>';
+            chatBtn.classList.add('chat_button_activ');
     }
 
     function closeChat() {
         chat.classList.remove('chat_active');
         chatBtn.innerHTML = '';
         chatBtn.innerHTML = '<i class="fas fa-comment-alt"></i>';
+        chatBtn.classList.remove('chat_button_activ');
     }
 
     chatBtn.addEventListener('click', () => {
@@ -31,9 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sendBtn = document.querySelector('.chat_send > button'),
           inputMsg = document.querySelector('.chat_send > input');
-          
-          const left = document.querySelectorAll('.message_left');
-          const right = document.querySelectorAll('.message_right');
 
         class ChatMsg {
             constructor(avatar, text, time, parenT) {
@@ -159,6 +158,19 @@ document.addEventListener('DOMContentLoaded', () => {
               '.chat_message_list')
               .render();
               setTimeout(sendRobot, 1000);
+          });
+
+          document.addEventListener('click', (e) => {
+            if (e.code === 'Enter' && chat.classList.contains('chat_active')) { 
+                e.preventDefault();
+                new ChatMsg(
+                "img/avatar.png",
+                inputMsg.value,
+                '1:05',
+                '.chat_message_list')
+                .render();
+                setTimeout(sendRobot, 1000);
+            }
           });
 
 });

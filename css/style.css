@@ -611,7 +611,7 @@ body {
     .chat_button {
         width: 65px;
         height: 65px;
-        background: rgba(223, 169, 74, 1);;
+        background: rgba(223, 169, 74, 1);
         border-radius: 50%;
         position: fixed;
         bottom: 30px;
@@ -624,6 +624,19 @@ body {
         -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
         box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
         cursor: pointer;
+        opacity: 0.5;
+    }
+
+    .chat_button:hover {
+        opacity: 1;
+    }
+
+    .chat_button_activ {
+        opacity: 1;
+    }
+
+    .chat_button_activ:hover {
+        background: rgb(199, 150, 67);
     }
 
     .chat_button i {
