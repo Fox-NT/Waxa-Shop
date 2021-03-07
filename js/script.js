@@ -35,10 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
           inputMsg = document.querySelector('.chat_send > input');
 
         class ChatMsg {
-            constructor(avatar, text, time, parenT) {
+            constructor(avatar, text, hourse, minutes, parenT) {
                 this.avatar = avatar;
                 this.text = text;
-                this.time = time;
+                this.hourse = hourse;
+                this.minutes = minutes;
                 this.parent = document.querySelector(parenT);
             } 
             render() {
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                     <div class="date_message">
-                        <time>${this.time}</time>
+                        <time>${this.hourse}:${this.minutes}</time>
                     </div>`;
                 this.parent.append(newMsg);
                 
@@ -69,6 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+              let t = new Date();
+              const hours = t.getHours();
+              const minutes = t.getMinutes();
           
         
 
@@ -97,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                     <div class="date_message">
-                        <time>1:10</time>
+                        <time>${hours}:${minutes}</time>
                     </div>`;
                 list.append(robotMsg);
                 addClassRobot();
@@ -112,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                     <div class="date_message">
-                        <time>1:10</time>
+                        <time>${hours}:${minutes}</time>
                     </div>`;
                     list.append(robotMsg);
                     addClassRobot();
@@ -127,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                     <div class="date_message">
-                        <time>1:10</time>
+                        <time>${hours}:${minutes}</time>
                     </div>`;
                     list.append(robotMsg);
                     addClassRobot();
@@ -142,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 <div class="date_message">
-                    <time>1:10</time>
+                    <time>${hours}:${minutes}</time>
                 </div>`;
                 list.append(robotMsg);
                 addClassRobot();
@@ -154,7 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
               new ChatMsg(
               "img/avatar.png",
               inputMsg.value,
-              '1:05',
+              hours,
+              minutes,
               '.chat_message_list')
               .render();
               setTimeout(sendRobot, 1000);
@@ -166,7 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 new ChatMsg(
                 "img/avatar.png",
                 inputMsg.value,
-                '1:05',
+                hours,
+                minutes,
                 '.chat_message_list')
                 .render();
                 setTimeout(sendRobot, 1000);
