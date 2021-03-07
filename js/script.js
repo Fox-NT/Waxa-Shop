@@ -202,14 +202,25 @@ let i = 0;
           document.addEventListener('click', (e) => {
             if (e.code === 'Enter' && chat.classList.contains('chat_active')) { 
                 e.preventDefault();
+                a = new Date();
                 new ChatMsg(
-                b.msg[1].img,
+                b.msg[0].name,
                 inputMsg.value,
                 a.getHours(),
                 addZero(a.getMinutes()),
                 '.chat_message_list')
                 .render();
+                    a = null;
                 setTimeout(sendRobot, 1000);
+
+                let User = inputMsg.value;
+
+                b.msg[i] = {
+                    name: User
+                };
+                i++;
+                console.log(b.msg[0].name);
+                console.log(b);
             }
           });
 });
