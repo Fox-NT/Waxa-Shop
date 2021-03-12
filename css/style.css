@@ -2170,7 +2170,12 @@ form {
 }
 /*Media Request*/
 @media screen and (max-width: 768px) {
-    
+    .chat {
+        display: none;
+    }
+    .chat_button {
+        display: none;
+    }
 
 .burger_menu_mobile {
     display: block;
