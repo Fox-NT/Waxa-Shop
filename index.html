@@ -8,10 +8,35 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7953fe4c8d.js" crossorigin="anonymous"></script>
     <title>Waxa Shop</title>
 </head>
 <body>
+    <div class="burger_menu_wrapper">
+        <div class="burger_menu_list">
+            <div class="burger_close">X</div>
+            <div class="burger_logo">
+                <img src="img/burger_logo.svg" alt="Logo">
+            </div>
+            <div class="burger_list_wrapper">
+                <ul class="burger_item_list">
+                    <li class="burger_item"><a href="#">Главная</a></li>
+                    <li class="burger_item"><a href="#">Бонусная программа</a></li>
+                    <li class="burger_item"><a href="#">Отзывы</a></li>
+                    <li class="burger_item"><a href="#">FAQ</a></li>
+                    <li class="burger_item"><a href="#">Как ухаживать за обувью?</a></li>
+                    <li class="burger_item"><a href="#">Блог</a></li>
+                    <li class="burger_item"><a href="#">О нас</a></li>
+                    <li class="burger_item"><a href="#">Оплата и доставка</a></li>
+                    <li class="burger_item"><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="burger_footer">
+                <div>Интернет-магазин работает пн-пт 10:00-18:00. по всей России. Розничный магазин пн-пт 11:00-20:00, сб-вс 11:00-18:00.</div>
+            </div>
+        </div>
+    </div>
     <header class="header_container">
         <div class="container">
             <div class="header_contacts">
@@ -34,6 +59,7 @@
                     </div>
                     <span>Меню</span>
                 </div>
+                
                 <div class="header_logo">
                     <img src="img/logo.svg" alt="Logotype">
                 </div>
@@ -58,11 +84,33 @@
             </div>
             <div class="header_category">
                 <div class="category_mobile_wrapper">
-                    <div class="category_mobile"><a href="#">Категории</a> </div>
+                    <div class="category_mobile"><a href="#">Категории</a></div>
                     <div class="search_mobile"><a href="#">Поиск</a> </div>
                 </div>
                 <ul class="category_list">
-                    <li class="category_item"><a href="#">Средства для обуви</a></li>
+                    <li class="category_item"><a href="#">Средства для обуви</a>
+                        <div><ul class="sub-menu">
+                            <li class="sub-menu_item"><a href="#">Жидкая кожа для обуви</a></li>
+                            <li class="sub-menu_item"><a href="№">Краска для обуви</a>
+                                <ul class="sub-sub_menu">
+                                    <li class="sub-sub_item"><a>Краска для замшевой обуви</a></li>
+                                    <li class="sub-sub_item"><a>Краска для обуви из кожи</a></li>
+                                    <li class="sub-sub_item"><a>Краска для обуви из нубука</a></li>
+                                    <li class="sub-sub_item"><a>Крем краска</li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu_item"><a href="#">Щетки для обуви</a></li>
+                            <li class="sub-menu_item"><a href="#">Очистители</a></li>
+                            <li class="sub-menu_item"><a href="#">Водооталкивающая жидкость</a></li>
+                            <li class="sub-menu_item"><a href="#">Растяжители</a></li>
+                            <li class="sub-menu_item"><a href="#">Крем для обуви</a></li>
+                            <li class="sub-menu_item"><a href="#">Воск для обуви</a></li>
+                            <li class="sub-menu_item"><a href="#">Жир для обуви</a></li>
+                            <li class="sub-menu_item"><a href="#">Бальзм для обуви</a></li>
+                            <li class="sub-menu_item"><a href="#">Дезодорант для обуви</a></li>
+                        </ul>
+                    </div>
+                </li>
                     <li class="category_item"><a href="#">Материал</a></li>
                     <li class="category_item"><a href="#">Назначение</a></li>
                     <li class="category_item"><a href="#">Наборы</a></li>
@@ -170,7 +218,11 @@
                 </div>
                 <div class="collection_row">
                     <div class="column_one-item">
-                        <div class="one-row_item">
+                        <div class="one-row_item"
+                         data-aos="fade-right"
+                        data-aos-duration="800"
+                        data-aos-easing="linear"             
+                        data-aos-offset="0">
                             <img src="img/item_coll_1.jpg" alt="Крема для обуви">
                             <div class="item_title">Крема для обуви</div>
                             <div class="item_link"><i class="fas fa-arrow-right"></i></div>
@@ -178,7 +230,10 @@
                             <div class="item_stock">25+ товаров</div>
                         </div>
                     </div>
-                    <div class="column_two-item">
+                    <div class="column_two-item" data-aos="fade-left"
+                    data-aos-duration="800"
+                    data-aos-easing="linear"             
+                    data-aos-offset="0">
                         <div class="one-row_item">
                             <img src="img/item_coll_2.jpg" alt="Очиститель для обуви">
                             <div class="item_title">Очиститель для обуви</div>
@@ -440,7 +495,17 @@
     <div class="chat_button">
         <i class="fas fa-comment-alt"></i>
     </div>
+    <div class="up_button">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <div class="down_button">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script src="js/chat.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
