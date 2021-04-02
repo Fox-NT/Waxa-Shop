@@ -625,6 +625,7 @@ body {
         box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
         cursor: pointer;
         opacity: 0.5;
+        display: none;
     }
 
     .chat_button:hover {
@@ -868,7 +869,7 @@ body {
     visibility: hidden;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     transition: all 0.5s;
 }
